@@ -1,11 +1,11 @@
-*
 /*------things-----*/
-{
+/* *{
     margin: 0;
     padding: 0;
     font-family: sans-serif;
     box-sizing: border-box;
-}
+} */
+
 .banner{
     width: 100%;
     height: 100vh;
@@ -95,107 +95,7 @@ button:hover{
 
 
 
-
-
-
-
-
-
-
-
-
-
-/* about us
-*{
-    margin: 0px;
-    padding: 0px;
-    box-sizing: border-box;
-}
-body{
-    min-height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: #f1f1f1;
-}
-.about{
-    background: url(khan.png) no-repeat left;
-    background-size: 55%;
-    background-color: #fdfdfd;
-    overflow: hidden;
-    padding: 100px 0;
-}
-.inner-section{
-    width: 55%;
-    float: right;
-    background-color: #d39393;
-    padding: 140px;
-    box-shadow: 13px 12px 8px rgba(0,0,0,0.3);
-}
-.inner-section h1{
-    margin-bottom: 30px;
-    font-size: 30px;
-    font-weight: 900;
-}
-.text{
-    font-size: 13px;
-    color: #545454;
-    line-height: 30px;
-    text-align: justify;
-    margin-bottom: 40px;
-}
-.skills button{
-    font-size: 22px;
-    text-align: center;
-    letter-spacing: 2px;
-    border: none;
-    border-radius: 20px;
-    padding: 8px;
-    width: 200px;
-    background-color: #00999c;
-    color: white;
-    cursor: pointer;
-}
-.skills button:hover{
-    transition: 1s;
-    background-color: #ecf5f5;
-    color: #00999c;
-}
-@media screen and (max-width:1200px){
-    .inner-section{
-        padding: 80px;
-    }
-}
-@media screen and (max-width:1000px){
-    .about{
-        background-size: 100%;
-        padding: 100px 40px;
-    }
-    .inner-section{
-        width: 100%;
-    }
-}
-
-@media screen and (max-width:600px){
-    .about{
-        padding: 0;
-    }
-    .inner-section{
-        padding: 60px;
-    }
-    .skills button{
-        font-size: 19px;
-        padding: 5px;
-        width: 160px;
-    }
-} */
-
-*{
-    padding: 0;
-    margin: 0;
-    font-family: 'Josefin Sans', sans-serif;
-    box-sizing: border-box;
-}
+/*about*/
 .about{
     width: 100%;
     padding: 78px 0px;
@@ -229,22 +129,38 @@ body{
     margin-bottom: 20px;
 }
 
-
-/*------Player Icons-----*/
-
-@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family:'Roboto', regular;
+span{
+  color: #f9004d;
+}
+.about-text p{
+  color: #fcfc;
+  letter-spacing: 1px;
+  line-height: 28px;
+  font-size: 18px;
+  margin-bottom: 45px;
+}
+button{
+  background: #f9004d;
+  color: white;
+  text-decoration: none;
+  border: 2px solid transparent;
+  font-weight: bold;
+  padding: 13px 30px;
+  border-radius: 30px;
+  transition: .4s;
+}
+button:hover{
+  background: transparent;
+  border: 2px solid #f9004d;
+  cursor: pointer;
 }
 
+/*------Player Icons-----*/
 h1
 {
     font-size: 50px;
     line-height: 64px;
-    color: rgb(60, 60, 60);
+    color: white;
 }
 
 h2{
@@ -256,12 +172,12 @@ h2{
 h3{
     font-size: 46px;
     line-height: 54px;
-    color: rgb(60, 60, 60);
+    color: white;
 }
 
 h4{
     font-size: 20px;
-    color: rgb(60, 60, 60);
+    color:white;
 }
 
 h6{
@@ -272,7 +188,7 @@ h6{
 p
 {
     font-size: 16px;
-    color: rgb(60, 60, 60);
+    color: white;
 }
 
 .section-p1
@@ -397,13 +313,13 @@ body
     cursor: pointer;
     box-shadow: 20px 20px 30px rgba(0,0,0,0.02);
     margin: 15px 0;
-    transition: 0.2s ease;
+    transition: 0.7s ease;
     position: relative;
 }
 
 #product1 .pro:hover
 {
-    box-shadow: 20px 20px;
+    box-shadow: 10px 10px;
 }
 
 #product1 .pro img
@@ -425,14 +341,14 @@ body
     padding-top: 20px;
     flex-wrap:wrap; */
     display: inline-block;
-    margin: 0 -50px 0 0;
+    margin:  0 -310px 0 0;
     
 }
 
 
 #product1 .pro .des span
 {
-    color: grey;
+    color: greenyellow;
 }
 
 #product1
@@ -556,6 +472,93 @@ body
     }
 }
     
+/*----reviews----*/
+body{
+  display: flex;
+  height: 100vh;
+}
+.reviewbg{
+  width: 100%;
+  padding: 0px 0px;
+  background-color: #191919;
+  margin: 0;
+}
+
+.rev-section{
+  margin: auto;
+  padding: 0 1rem;
+  max-width: 1100px;
+  text-align: center;
+}
+
+.title{
+  font-size: 2.5rem;
+  text-transform: uppercase;
+  color: white;
+  margin-bottom: .5rem;
+}
+.note{
+  font-size: 1.1rem;
+  color: rgb(150, 150, 150);
+  font-style: italic;
+    color: red;
+  font
+
+}
+
+.reviews{
+  margin: 2rem auto;
+  display: flex;
+  flex-wrap: wrap;
+}
+.review{
+  margin: 0 1rem;
+  min-width: 300px;
+  flex: 1;
+}
+
+.head-review{
+  margin: 1.75rem auto;
+  width: 150px;
+  height: 150px;
+}
+img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, .25);
+}
+
+.body-review{
+  background-color: #f1c1c1;
+  padding: 2.5rem;
+  box-shadow: 2px 2px 10px 3px #f1c1c1;
+}
+.name-review{
+  font-size: 1.5rem;
+  color: rgb(50, 50, 50);
+  margin-bottom: .25rem;
+}
+.place-review{
+  color: red;
+  font-style: italic;
+}
+.rating{
+  color: rgb(253, 180, 42);
+  margin: 1rem 0;
+}
+.desc-review{
+  line-height: 1.5rem;
+  letter-spacing: 1px;
+  color: rgb(0, 0, 0);
+}
+
+@media (max-width: 678px){
+  .review{
+    margin-top: 1.5rem;
+  }
+}
 
 
 
@@ -568,7 +571,11 @@ body
 
 
 
-
+/* .containerz {
+  background-image: url(images/cockster.png);
+  background-size: cover;
+  padding: 50px;
+} */
 
 
 
@@ -576,20 +583,14 @@ body
 
 
 /*------Contact us-----*/
-*
-{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
 
-}
 body
 {
     width: 100%;
     height: 100vh;
     display: grid;
     align-items: center;
-    background: #FFFFFF;
+    background: #1d2026;
     font-family: 'Poppins', sans-serif;
 }
 .contact-in
@@ -599,7 +600,7 @@ body
     margin: auto; 
     display: flex; 
     flex-wrap: wrap; 
-    padding: lOpx; 
+    padding: 1Opx; 
     border-radius: lOpx; 
     background: Xfff; 
     box-shadow: Opx Opx lOpx Opx #666; 
@@ -659,14 +660,13 @@ body
     border:none;
     outline: none;
     border-radius: 50px;
-    background: #8e2de2;
+    background: #f9004d;
     color: #fff;
     text-transform: uppercase;
     padding: 10px 0;
     cursor: pointer;
     font-size: 18px;
 }
-
 
 
 
@@ -697,11 +697,7 @@ body{
 	line-height: 1.5;
 	font-family: 'Poppins', sans-serif;
 }
-*{
-	margin: 0px;
-	padding: 0;
-	box-sizing: border-box;
-}
+
 .container{
 	max-width: 1170px;
 	margin:auto;
