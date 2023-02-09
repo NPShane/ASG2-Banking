@@ -29,47 +29,62 @@
           <li><a href="#browse" class="smooth-scroll">Browse Pals</a></li>
           <li><a href="#reviews" class="smooth-scroll">Review</a></li>
           <li><a href="#contact" class="smooth-scroll">Contact Us</a></li>
-          <li><a href="#">Login</a></li>
+          <li><a href="#login" id="myBtn">Login</a></li>
         </ul>
       </div>
       <div class="content">
         <h1>PlayPal</h1>
         <div>
-          <button type="button">Find a Pal</button>
+          <button type="button" onclick="document.querySelector('#browse').scrollIntoView({ behavior: 'smooth' })">Find a Pal</button>
         </div>
       </div>
     </div>
   </div>
 
     <!--Login-->
-      <div class="login-popup">
-        <div class="form-container">
-          <form>
-            <h2>Login</h2>
-            <input type="text" placeholder="Username or Email" />
-            <input type="password" placeholder="Password" />
-            <button type="submit">Submit</button>
-          </form>
-          <button class="close-button">Close</button>
-        </div>
-      </div>
-      <button class="open-popup">Open Login</button>
-      
+    <!-- The Modal -->
+    <div id="myModal" class="modal">
 
+      <!-- Modal Content -->
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <div class="modal-header">
+          <h2>Login</h2>
+        </div>
+        <form>
+          <div class="form-group">
+            <label for="username">Username:</label>
+            <input type="text" class="form-control" id="username" name="username">
+          </div>
+          <div class="form-group">
+            <label for="password">Password:</label>
+            <input type="password" class="form-control" id="password" name="password">
+          </div>
+          <input type="submit" class="btn btn-primary" value="Submit">
+        </form>
+      </div>
+    
+    </div>
+
+
+    
+      
     
 
     <!--About us Section-->
 
-        <section class="about" id="about">
+        <section class="about">
           <div class="mains">
-            <img src="images/Valorant-9.png" />
+            <img src="images/friend art.png" />
             <div class="about-text">
               <h1>About Us</h1>
               <p>PlayPal is a platform where gaming enthusiasts can connect with other individuals for friendship and potentially more.
                  Our goal is to bring together the gaming community and create relationships through shared 
                  interests. Whether you're looking for a gaming buddy or your player 2, our website makes 
                  it easier to find compatible matches. Join our community today and start making memories with your new gaming partner.</p>
-              <button type="button">Contact Us</button>
+                 <h3 id="browse"></h3>
+                 <button type="button" onclick="scrollToContact()">Contact Us</button>
+              
             </div>
           </div>
         </section>
@@ -80,13 +95,13 @@
 
     <!-- Browse section -->
     <section id="product1" class="section-p1">
-      <h3 id="browse">Browse</h3>
+      <h3>Browse</h3>
       <div class="pro-container">
         <div class="pro">
           <img src="images/V_AGENTS_587x900_sage.png" alt="sage" />
           <div class="des">
             <span>Mika</span>
-            <h5>kittenmaster69</h5>
+            <h5>You, me, Valorant, now</h5>
             <h4>$5.00/game</h4>
           </div>
         </div>
@@ -97,7 +112,7 @@
           <img src="Images/V_AGENTS_587x900_KillJoy_.png" alt="killjoy" />
           <div class="des">
             <span>Poky</span>
-            <h5>nutdeez12</h5>
+            <h5>COme into the unknown</h5>
             <h4>$7.00/game</h4>
           </div>
         </div>
@@ -108,7 +123,7 @@
           <img src="Images/V_AGENTS_587x900_Reyna.png" alt="reyna" />
           <div class="des">
             <span>Ayla</span>
-            <h5>Goddesslmao44</h5>
+            <h5>let's have some fun</h5>
             <h4>$5.00/game</h4>
           </div>
         </div>
@@ -119,7 +134,7 @@
           <img src="Images/V_AGENTS_587x900_Jett.png" alt="jett" />
           <div class="des">
             <span>Yurika</span>
-            <h5>Goddesslmao44</h5>
+            <h5>i'll be your "his sage"</h5>
             <h4>$5.00/game</h4>
           </div>
         </div>
@@ -131,7 +146,7 @@
           <img src="images/V_AGENTS_587x900_sage.png" alt="sage" />
           <div class="des">
             <span>Trix</span>
-            <h5>kittenmaster69</h5>
+            <h5>i will revive you :3</h5>
             <h4>$5.00/game</h4>
           </div>
         </div>
@@ -141,8 +156,8 @@
         <div class="pro">
           <img src="Images/V_AGENTS_587x900_KillJoy_.png" alt="killjoy" />
           <div class="des">
-            <span>Killjoy Main</span>
-            <h5>nutdeez12</h5>
+            <span>WillyDonker</span>
+            <h5>instalocker :)</h5>
             <h4>$7.00/game</h4>
           </div>
         </div>
@@ -152,8 +167,8 @@
         <div class="pro">
           <img src="Images/V_AGENTS_587x900_Reyna.png" alt="reyna" />
           <div class="des">
-            <span>Reyna Main</span>
-            <h5>Goddesslmao44</h5>
+            <span>peterparker69</span>
+            <h5>teach me how to be patient</h5>
             <h4>$5.00/game</h4>
           </div>
         </div>
@@ -164,7 +179,7 @@
           <img src="Images/V_AGENTS_587x900_Jett.png" alt="jett" />
           <div class="des">
             <span>Jett Main</span>
-            <h5>Goddesslmao44</h5>
+            <h5>your pocket Omen</h5>
             <h4>$5.00/game</h4>
           </div>
         </div>
@@ -175,7 +190,7 @@
             <img src="Images/V_AGENTS_587x900_Reyna.png" alt="reyna" />
             <div class="des">
               <span>Reyna Main</span>
-              <h5>Goddesslmao44</h5>
+              <h5>kind of new, teach me? c:</h5>
               <h4>$5.00/game</h4>
             </div>
           </div>
@@ -186,7 +201,7 @@
             <img src="Images/V_AGENTS_587x900_Jett.png" alt="jett" />
             <div class="des">
               <span>Jett Main</span>
-              <h5>Goddesslmao44</h5>
+              <h5>your pocket healer</h5>
               <h4>$5.00/game</h4>
             </div>
           </div>
@@ -197,7 +212,7 @@
             <img src="Images/V_AGENTS_587x900_KillJoy_.png" alt="killjoy" />
             <div class="des">
               <span>Killjoy Main</span>
-              <h5>nutdeez12</h5>
+              <h5>Carries the spike.</h5>
               <h4>$7.00/game</h4>
             </div>
           </div>
@@ -208,7 +223,7 @@
             <img src="Images/V_AGENTS_587x900_Reyna.png" alt="reyna" />
             <div class="des">
               <span>Reyna Main</span>
-              <h5>Goddesslmao44</h5>
+              <h5>Cyka blyat rush B kekw</h5>
               <h4>$5.00/game</h4>
             </div>
           </div>
@@ -219,7 +234,7 @@
             <img src="Images/V_AGENTS_587x900_Jett.png" alt="jett" />
             <div class="des">
               <span>Jett Main</span>
-              <h5>Goddesslmao44</h5>
+              <h5>Pew pew pew!</h5>
               <h4>$5.00/game</h4>
             </div>
           </div>
@@ -230,7 +245,7 @@
               <img src="Images/V_AGENTS_587x900_Reyna.png" alt="reyna" />
               <div class="des">
                 <span>Reyna Main</span>
-                <h5>Goddesslmao44</h5>
+                <h5>iron gamesense</h5>
                 <h4>$5.00/game</h4>
               </div>
             </div>
@@ -241,16 +256,17 @@
               <img src="Images/V_AGENTS_587x900_Jett.png" alt="jett" />
               <div class="des">
                 <span class="custom-font">wdwdwdw.</span>
-                <h5>Goddesslmao44</h5>
+                <h5>Always the botfrag</h5>
                 <h4>$5.00/game</h4>
+                <h3 id="reviews"></h3>
               </div>
             </div>
           </div>
+          
   
 
 
     </section>
-<div class = "urmom" id="reviews"></div>
 </html>
 <!--Reviews Section-->
 <section class="reviewbg">
@@ -262,7 +278,7 @@
   
   <div class="review">
      <div class="head-review">
-        <img src="https://images.unsplash.com/photo-1488161628813-04466f872be2?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=700&q=80" width="250px">
+        <img src="images/women in the workplace 2022_standard_1536x1536.jpg" width="250px">
      </div>
      <div class="body-review">
         <div class="name-review">Humster Pottyworthy</div>
@@ -279,7 +295,7 @@
   </div>
   <div class="review">
      <div class="head-review">
-        <img src="https://images.unsplash.com/photo-1479936343636-73cdc5aae0c3?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=80" width="250px">
+        <img src="images/portrait-athlete-serious-african-american-woman-732x549-thumbnail-732x549.webp" width="250px">
      </div>
      <div class="body-review">
         <div class="name-review">Mike Oxmaul</div>
@@ -296,12 +312,13 @@
   </div>
   <div class="review">
      <div class="head-review">
-        <img src="https://images.unsplash.com/photo-1463453091185-61582044d556?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" width="250px">
+        <img src="images/women-rights-main-image.jpg" width="250px">
      </div>
      <div class="body-review">
         <div class="name-review">Ben Dover</div>
         <div class="place-review">New York</div>
         <div class="rating">
+          <div id="contact" class="haha">
            <i class="fas fa-star"></i>
            <i class="fas fa-star"></i>
            <i class="fas fa-star"></i>
@@ -310,7 +327,7 @@
         </div>
         <div class="desc-review">The website is fantastic and provides an excellent user experience. The layout is clean and modern, with a straightforward navigation that makes it easy to find what you're looking for.</div>
      </div>
-
+     
      
   </div>
   </div>
@@ -323,24 +340,25 @@
 
 
 <!-- contact us page Section -->
-  <div class="container">
-    <div id="contact" class="contact-in">
-      <div class="contact-map">
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d31909.480918227044!2d103.75582496363788!3d1.3656068894921871!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31da1177f04a4d01%3A0x3a9ef481b6d0a390!2sBukit%20Panjang!5e0!3m2!1sen!2ssg!4v1675939363595!5m2!1sen!2ssg" width="1000" height="600" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-      </div>
-      <div class="contact-form">
-        <h1>Contact Us Here</h1>
-        <form>
-          <input type="text" placeholder="Name" class="contact-form-txt" />
-          <input type="text" placeholder="Email" class="contact-form-txt" />
-          <textarea
-            placeholder="Message"
-            class="contact-form-txtarea"></textarea>
-          <input type="Submit" name="Submit" class="contact-form-btn" />
-        </form>
-      </div>
+<div class="container">
+  <div class="contact-in">
+    <div class="contact-map">
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d31909.480918227044!2d103.75582496363788!3d1.3656068894921871!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31da1177f04a4d01%3A0x3a9ef481b6d0a390!2sBukit%20Panjang!5e0!3m2!1sen!2ssg!4v1675939363595!5m2!1sen!2ssg" width="1000" height="600" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+    <div class="contact-form">
+      <h1>Contact Us Here</h1>
+      <form>
+        <input type="text" placeholder="Name" class="contact-form-txt" />
+        <input type="text" placeholder="Email" class="contact-form-txt" />
+        <textarea
+          placeholder="Message"
+          class="contact-form-txtarea"></textarea>
+        <input type="Submit" name="Submit" class="contact-form-btn" />
+      </form>
     </div>
   </div>
+</div>
+
 
 
 
@@ -452,4 +470,11 @@ closeButton.addEventListener('click', function() {
   });
 });
 
+  </script>
+  <!-- contact us page scroll from about us-->
+  <script>
+    function scrollToContact() {
+      const contact = document.querySelector("#contact");
+      contact.scrollIntoView({ behavior: "smooth" });
+    }
   </script>
