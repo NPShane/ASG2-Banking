@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html>  
   <head>
     <meta charset="UTF-8" />
     <title>PlayPal for Valorant</title>
@@ -7,13 +7,14 @@
     <link rel="stylesheet" href="style.css" />
     <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script async src="script.js"></script> -->
+    <script src="script.js"></script>
+
+
   </head>
 
   <body>
     <!-- Home -->
     <div id="home" class="banner">
-      
-      
       <div class="video-container">
       <video autoplay loop muted plays-inline>
         <source src="video1.mp4" type="video/mp4" />
@@ -23,56 +24,43 @@
       <div class="navbar">
         <img class="logo" src="logo.png" />
         <ul>
-          <li><a href="#home">Home</a></li>
-          <li><a href="#about">About</a></li>
-          <li><a href="#browse">Browse Pals</a></li>
-          <li><a href="#reviews">Review</a></li>
-          <li><a href="#contact">Contact Us</a></li>
+          <li><a href="#home" class="smooth-scroll">Home</a></li>
+          <li><a href="#about" class="smooth-scroll">About</a></li>
+          <li><a href="#browse" class="smooth-scroll">Browse Pals</a></li>
+          <li><a href="#reviews" class="smooth-scroll">Review</a></li>
+          <li><a href="#contact" class="smooth-scroll">Contact Us</a></li>
           <li><a href="#">Login</a></li>
         </ul>
       </div>
       <div class="content">
         <h1>PlayPal</h1>
-
         <div>
           <button type="button">Find a Pal</button>
         </div>
       </div>
     </div>
+  </div>
 
     <!--Login-->
-    <div id ="login-form" class="container">
-      <label for="show" class="close-btn fas fa-times" title="close"></label>
-      <div class="text">
-         Login Form
+      <div class="login-popup">
+        <div class="form-container">
+          <form>
+            <h2>Login</h2>
+            <input type="text" placeholder="Username or Email" />
+            <input type="password" placeholder="Password" />
+            <button type="submit">Submit</button>
+          </form>
+          <button class="close-button">Close</button>
+        </div>
       </div>
-      <form action="#">
-         <div class="data">
-            <label>Email or Phone</label>
-            <input type="text" required>
-         </div>
-         <div class="data">
-            <label>Password</label>
-            <input type="password" required>
-         </div>
-         <div class="forgot-pass">
-            <a href="#">Forgot Password?</a>
-         </div>
-         <div class="btn">
-            <div class="inner"></div>
-            <button type="submit">login</button>
-         </div>
-         <div class="signup-link">
-            Not a member? <a href="#">Signup now</a>
-         </div>
-      </form>
-   </div>
-</div>
+      <button class="open-popup">Open Login</button>
+      
 
+    
 
-    <!--About us-->
+    <!--About us Section-->
 
-        <section class="about">
+        <section class="about" id="about">
           <div class="mains">
             <img src="images/Valorant-9.png" />
             <div class="about-text">
@@ -85,12 +73,15 @@
             </div>
           </div>
         </section>
+
+
+  
  
 
-    <!-- Player images/icons -->
+    <!-- Browse section -->
     <section id="product1" class="section-p1">
-      <h3>Browse</h3>
-      <div id="browse" class="pro-container">
+      <h3 id="browse">Browse</h3>
+      <div class="pro-container">
         <div class="pro">
           <img src="images/V_AGENTS_587x900_sage.png" alt="sage" />
           <div class="des">
@@ -249,7 +240,7 @@
             <div class="pro">
               <img src="Images/V_AGENTS_587x900_Jett.png" alt="jett" />
               <div class="des">
-                <span>Jett Main</span>
+                <span class="custom-font">wdwdwdw.</span>
                 <h5>Goddesslmao44</h5>
                 <h4>$5.00/game</h4>
               </div>
@@ -259,15 +250,15 @@
 
 
     </section>
-
+<div class = "urmom" id="reviews"></div>
 </html>
-<!--Reviews-->
+<!--Reviews Section-->
 <section class="reviewbg">
 <div class="rev-section">
   <h2 class="title">Reviews</h2>
   <p class="note">Reviews</p>
   
-  <div class="reviews">
+  <div class="reviews" >
   
   <div class="review">
      <div class="head-review">
@@ -317,7 +308,7 @@
            <i class="fas fa-star"></i>
            <i class="fas fa-star-half"></i>
         </div>
-        <div class="desc-review">The website is fantastic and provides an excellent user experience. The layout is clean and modern, with a straightforward navigation that makes it easy to find what you're looking for. The site's graphics and images are of high quality, and the content is well-written and informative. </div>
+        <div class="desc-review">The website is fantastic and provides an excellent user experience. The layout is clean and modern, with a straightforward navigation that makes it easy to find what you're looking for.</div>
      </div>
 
      
@@ -331,7 +322,7 @@
 
 
 
-<!-- contact us page -->
+<!-- contact us page Section -->
   <div class="container">
     <div id="contact" class="contact-in">
       <div class="contact-map">
@@ -350,19 +341,7 @@
       </div>
     </div>
   </div>
-    <!-- <div class="container">
-      <div class="contact-box">
-        <div class="left"></div>
-        <div class="right">
-          <h2>Contact Us</h2>
-          <input type="text" class="field" placeholder="Your Name">
-          <input type="text" class="field" placeholder="Your Email">
-          <input type="text" class="field" placeholder="Phone">
-          <textarea placeholder="Message" class="field"></textarea>
-          <button class="btn">Send</button>
-        </div>
-      </div>
-    </div> -->
+
 
 
 
@@ -432,5 +411,45 @@
         </div>
       </div>
     </footer>
-
+</div>
 </html>
+
+
+
+<script>
+  // Smooth Scrolling
+  document.querySelectorAll('.smooth-scroll').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+      e.preventDefault();
+  
+      document.querySelector(this.getAttribute('href')).scrollIntoView({
+        behavior: 'smooth'
+      });
+    });
+  });
+  </script>
+
+  <script>
+    const openButton = document.querySelector('.open-popup');
+const closeButton = document.querySelector('.close-button');
+const popup = document.querySelector('.login-popup');
+
+openButton.addEventListener('click', function() {
+  popup.style.display = 'block';
+});
+
+closeButton.addEventListener('click', function() {
+  popup.style.display = 'none';
+});
+
+  </script>
+  <script>
+    $(document).ready(function() {
+  $(".scroll-btn").click(function() {
+    $("html, body").animate({
+      scrollTop: 0
+    }, 800);
+  });
+});
+
+  </script>
