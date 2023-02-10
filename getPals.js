@@ -13,5 +13,9 @@ $(function () {
 
   $.ajax(settings).done(function (response) {
     console.log(response);
+    response.forEach((pal, index) => {
+      $(".product1").append('<div class="pro">');
+      $("pro");
+    });
   });
 });
