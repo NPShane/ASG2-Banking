@@ -1,68 +1,118 @@
 <!DOCTYPE html>
-<html>
+<html>  
   <head>
     <meta charset="UTF-8" />
     <title>PlayPal for Valorant</title>
     <link href="css/style.css" rel="stylesheet" />
     <link rel="stylesheet" href="style.css" />
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <!-- <script async src="script.js"></script> -->
-    <script async src="getPals.js"></script>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script async src="script.js"></script> -->
   </head>
 
   <body>
     <!-- Home -->
+    
     <div id="home" class="banner">
+      <div class="video-container">
       <video autoplay loop muted plays-inline>
         <source src="video1.mp4" type="video/mp4" />
       </video>
+      
+      
       <div class="navbar">
         <img class="logo" src="logo.png" />
         <ul>
-          <li><a href="#home">Home</a></li>
-          <li><a href="#about">About</a></li>
-          <li><a href="#browse">Browse Pals</a></li>
-          <li><a href="#reviews">Review</a></li>
-          <li><a href="#contact">Contact Us</a></li>
-          <li><a href="#">Login</a></li>
+          <li><a href="#home" class="smooth-scroll">Home</a></li>
+          <li><a href="#abouuut" class="smooth-scroll">About</a></li>
+          <li><a href="#browse" class="smooth-scroll">Browse Pals</a></li>
+          <li><a href="#reviews" class="smooth-scroll">Review</a></li>
+          <li><a href="#contact" class="smooth-scroll">Contact Us</a></li>
+          <li><a href="#login" >Login</a></li>
         </ul>
       </div>
       <div class="content">
         <h1>PlayPal</h1>
-
         <div>
-          <button type="button">Find a Pal</button>
+          <button type="button" onclick="document.querySelector('#browse').scrollIntoView({ behavior: 'smooth' })">Find a Pal</button>
         </div>
       </div>
     </div>
+  </div>
+    
 
-    <!--About us-->
 
+  
+  
+    <!--Login-->
+    <div class = "login-container">
+    <div class="center">
+      <input type="checkbox" id="show">
+      <div class="container">
+         <label for="show" class="close-btn fas fa-times" title="close"></label>
+         <div class="text">
+            Login Form
+         </div>
+         <form action="#">
+            <div class="data">
+               <label>Email or Phone</label>
+               <input type="text" required>
+            </div>
+            <div class="data">
+               <label>Password</label>
+               <input type="password" required>
+            </div>
+            <div class="forgot-pass">
+               <a href="#">Forgot Password?</a>
+            </div>
+            <div class="btn">
+               <div class="inner"></div>
+               <button type="submit">login</button>
+            </div>
+            <div class="signup-link">
+               Not a member? <a href="#">Signup now</a>
+            </div>
+         </form>
+      </div>
+   </div>
+    </div>
+
+
+    
+      
+    
+
+    <!--About us Section-->
+    <h3 id="abouuut"></h3>
         <section class="about">
-          <div class="main">
-            <img src="images/Valorant-9.png" />
+          <div class="mains">
+            <img src="images/friend art.png" />
             <div class="about-text">
               <h1>About Us</h1>
               <p>PlayPal is a platform where gaming enthusiasts can connect with other individuals for friendship and potentially more.
                  Our goal is to bring together the gaming community and create relationships through shared 
                  interests. Whether you're looking for a gaming buddy or your player 2, our website makes 
                  it easier to find compatible matches. Join our community today and start making memories with your new gaming partner.</p>
-              <button type="button">Contact Us</button>
+                 <h3 id="browse"></h3>
+                 <button type="button" onclick="scrollToContact()">Contact Us</button>
+              
             </div>
           </div>
         </section>
+
+
+  
  
 
-    <!-- Player images -->
+    <!-- Browse section -->
     <section id="product1" class="section-p1">
-      <h3>Recommended</h3>
-      <div id="browse" class="pro-container">
+      <h3>Browse</h3>
+      <div class="pro-container">
         <div class="pro">
           <img src="images/V_AGENTS_587x900_sage.png" alt="sage" />
           <div class="des">
-            <span>Sage Main</span>
-            <h5>kittenmaster69</h5>
-            <h4>$5/game</h4>
+            <span>Mika</span>
+            <h5>You, me, Valorant, now</h5>
+            <h4>$5.00/game</h4>
           </div>
         </div>
       </div>
@@ -71,9 +121,9 @@
         <div class="pro">
           <img src="Images/V_AGENTS_587x900_KillJoy_.png" alt="killjoy" />
           <div class="des">
-            <span>Killjoy Main</span>
-            <h5>nutdeez12</h5>
-            <h4>$7/game</h4>
+            <span>Poky</span>
+            <h5>COme into the unknown</h5>
+            <h4>$7.00/game</h4>
           </div>
         </div>
       </div>
@@ -82,9 +132,54 @@
         <div class="pro">
           <img src="Images/V_AGENTS_587x900_Reyna.png" alt="reyna" />
           <div class="des">
-            <span>Reyna Main</span>
-            <h5>Goddesslmao44</h5>
-            <h4>$5/game</h4>
+            <span>Ayla</span>
+            <h5>let's have some fun</h5>
+            <h4>$5.00/game</h4>
+          </div>
+        </div>
+      </div>
+
+      <div class="pro-container">
+        <div class="pro">
+          <img src="Images/V_AGENTS_587x900_Jett.png" alt="jett" />
+          <div class="des">
+            <span>Yurika</span>
+            <h5>i'll be your "his sage"</h5>
+            <h4>$5.00/game</h4>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="pro-container">
+        <div class="pro">
+          <img src="images/V_AGENTS_587x900_sage.png" alt="sage" />
+          <div class="des">
+            <span>Trix</span>
+            <h5>i will revive you :3</h5>
+            <h4>$5.00/game</h4>
+          </div>
+        </div>
+      </div>
+
+      <div class="pro-container">
+        <div class="pro">
+          <img src="Images/V_AGENTS_587x900_KillJoy_.png" alt="killjoy" />
+          <div class="des">
+            <span>WillyDonker</span>
+            <h5>instalocker :)</h5>
+            <h4>$7.00/game</h4>
+          </div>
+        </div>
+      </div>
+
+      <div class="pro-container">
+        <div class="pro">
+          <img src="Images/V_AGENTS_587x900_Reyna.png" alt="reyna" />
+          <div class="des">
+            <span>peterparker69</span>
+            <h5>teach me how to be patient</h5>
+            <h4>$5.00/game</h4>
           </div>
         </div>
       </div>
@@ -94,33 +189,106 @@
           <img src="Images/V_AGENTS_587x900_Jett.png" alt="jett" />
           <div class="des">
             <span>Jett Main</span>
-            <h5>Goddesslmao44</h5>
-            <h4>$5/game</h4>
+            <h5>your pocket Omen</h5>
+            <h4>$5.00/game</h4>
           </div>
         </div>
       </div>
 
-      <div class="pro-container">
-        <div class="pro">
-          <img src="Images/Neon_KeyArt-Web.png" alt="neon" />
-          <div class="des">
-            <span>Neon Main</span>
-            <h5>Goddesslmao44</h5>
-            <h4>$5/game</h4>
+        <div class="pro-container">
+          <div class="pro">
+            <img src="Images/V_AGENTS_587x900_Reyna.png" alt="reyna" />
+            <div class="des">
+              <span>Reyna Main</span>
+              <h5>kind of new, teach me? c:</h5>
+              <h4>$5.00/game</h4>
+            </div>
+          </div>
+        </div>
+  
+        <div class="pro-container">
+          <div class="pro">
+            <img src="Images/V_AGENTS_587x900_Jett.png" alt="jett" />
+            <div class="des">
+              <span>Jett Main</span>
+              <h5>your pocket healer</h5>
+              <h4>$5.00/game</h4>
+            </div>
           </div>
         </div>
 
-<!--Reviews-->
+        <div class="pro-container">
+          <div class="pro">
+            <img src="Images/V_AGENTS_587x900_KillJoy_.png" alt="killjoy" />
+            <div class="des">
+              <span>Killjoy Main</span>
+              <h5>Carries the spike.</h5>
+              <h4>$7.00/game</h4>
+            </div>
+          </div>
+        </div>
+  
+        <div class="pro-container">
+          <div class="pro">
+            <img src="Images/V_AGENTS_587x900_Reyna.png" alt="reyna" />
+            <div class="des">
+              <span>Reyna Main</span>
+              <h5>Cyka blyat rush B kekw</h5>
+              <h4>$5.00/game</h4>
+            </div>
+          </div>
+        </div>
+  
+        <div class="pro-container">
+          <div class="pro">
+            <img src="Images/V_AGENTS_587x900_Jett.png" alt="jett" />
+            <div class="des">
+              <span>Jett Main</span>
+              <h5>Pew pew pew!</h5>
+              <h4>$5.00/game</h4>
+            </div>
+          </div>
+        </div>
+  
+          <div class="pro-container">
+            <div class="pro">
+              <img src="Images/V_AGENTS_587x900_Reyna.png" alt="reyna" />
+              <div class="des">
+                <span>Reyna Main</span>
+                <h5>iron gamesense</h5>
+                <h4>$5.00/game</h4>
+              </div>
+            </div>
+          </div>
+    
+          <div class="pro-container">
+            <div class="pro">
+              <img src="Images/V_AGENTS_587x900_Jett.png" alt="jett" />
+              <div class="des">
+                <span class="custom-font">wdwdwdw.</span>
+                <h5>Always the botfrag</h5>
+                <h4>$5.00/game</h4>
+                <h3 id="reviews"></h3>
+              </div>
+            </div>
+          </div>
+          
+  
+
+
+    </section>
+
+<!--Reviews Section-->
 <section class="reviewbg">
 <div class="rev-section">
-  <h2 class="title">Our Customers Love Us</h2>
+  <h2 class="title">Reviews</h2>
   <p class="note">Reviews</p>
   
-  <div class="reviews">
+  <div class="reviews" >
   
   <div class="review">
      <div class="head-review">
-        <img src="https://images.unsplash.com/photo-1488161628813-04466f872be2?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=700&q=80" width="250px">
+        <img src="images/women in the workplace 2022_standard_1536x1536.jpg" width="250px">
      </div>
      <div class="body-review">
         <div class="name-review">Humster Pottyworthy</div>
@@ -137,7 +305,7 @@
   </div>
   <div class="review">
      <div class="head-review">
-        <img src="https://images.unsplash.com/photo-1479936343636-73cdc5aae0c3?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=80" width="250px">
+        <img src="images/portrait-athlete-serious-african-american-woman-732x549-thumbnail-732x549.webp" width="250px">
      </div>
      <div class="body-review">
         <div class="name-review">Mike Oxmaul</div>
@@ -154,62 +322,55 @@
   </div>
   <div class="review">
      <div class="head-review">
-        <img src="https://images.unsplash.com/photo-1463453091185-61582044d556?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" width="250px">
+        <img src="images/women-rights-main-image.jpg" width="250px">
      </div>
      <div class="body-review">
         <div class="name-review">Ben Dover</div>
         <div class="place-review">New York</div>
         <div class="rating">
+          <div id="contact" class="haha">
            <i class="fas fa-star"></i>
            <i class="fas fa-star"></i>
            <i class="fas fa-star"></i>
            <i class="fas fa-star"></i>
            <i class="fas fa-star-half"></i>
         </div>
-        <div class="desc-review">The website is fantastic and provides an excellent user experience. The layout is clean and modern, with a straightforward navigation that makes it easy to find what you're looking for. The site's graphics and images are of high quality, and the content is well-written and informative. </div>
+        <div class="desc-review">The website is fantastic and provides an excellent user experience. The users are super friendly.</div>
      </div>
+     
+     
   </div>
   </div>
 </section>
   </div>
+  
 
 
 
 
 
 
-<!-- contact us page -->
-  <div class="container">
-    <div id="contact" class="contact-in">
-      <div class="contact-map">
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3988.7400248333543!2d103.77215791528941!3d1.3321089620019508!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31da107d8eb4e359%3A0x75d2e7ffdeeb0c43!2sNgee%20Ann%20Polytechnic!5e0!3m2!1sen!2ssg!4v1675795397173!5m2!1sen!2ssg" width="100%" height="auto" style="border:0;" allowfullscreen=""aria-hidden="false" tabindex="0"></iframe>
-      </div>
-      <div class="contact-form">
-        <h1>Contact Us Here</h1>
-        <form>
-          <input type="text" placeholder="Name" class="contact-form-txt" />
-          <input type="text" placeholder="Email" class="contact-form-txt" />
-          <textarea
-            placeholder="Message"
-            class="contact-form-txtarea"></textarea>
-          <input type="Submit" name="Submit" class="contact-form-btn" />
-        </form>
-      </div>
+<!-- contact us page Section -->
+<div class="container">
+  <div class="contact-in">
+    <div class="contact-map">
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d31909.480918227044!2d103.75582496363788!3d1.3656068894921871!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31da1177f04a4d01%3A0x3a9ef481b6d0a390!2sBukit%20Panjang!5e0!3m2!1sen!2ssg!4v1675939363595!5m2!1sen!2ssg" width="1000" height="600" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+    <div class="contact-form">
+      <h1>Contact Us Here</h1>
+      <form>
+        <input type="text" placeholder="Name" class="contact-form-txt" />
+        <input type="text" placeholder="Email" class="contact-form-txt" />
+        <textarea
+          placeholder="Message"
+          class="contact-form-txtarea"></textarea>
+        <input type="Submit" name="Submit" class="contact-form-btn" />
+      </form>
     </div>
   </div>
-    <!-- <div class="container">
-      <div class="contact-box">
-        <div class="left"></div>
-        <div class="right">
-          <h2>Contact Us</h2>
-          <input type="text" class="field" placeholder="Your Name">
-          <input type="text" class="field" placeholder="Your Email">
-          <input type="text" class="field" placeholder="Phone">
-          <textarea placeholder="Message" class="field"></textarea>
-          <button class="btn">Send</button>
-        </div>
-      </div>
-    </div> -->
+</div>
+
+
 
 
 
@@ -261,10 +422,10 @@
           <div class="footer-col">
             <h4>follow us</h4>
             <div class="social-links">
-              <a href="#"><i class="fab fa-facebook-f"></i></a>
-              <a href="#"><i class="fab fa-twitter"></i></a>
-              <a href="#"><i class="fab fa-instagram"></i></a>
-              <a href="#"><i class="fab fa-linkedin-in"></i></a>
+              <a href="https://www.facebook.com/"><i class="fab fa-facebook-f"></i></a>
+              <a href="https://www.twitter.com/"><i class="fab fa-twitter"></i></a>
+              <a href="https://www.instagram.com/"><i class="fab fa-instagram"></i></a>
+              <a href="https://www.linkedin.com/"><i class="fab fa-linkedin-in"></i></a>
             </div>
           </div>
         </div>
@@ -272,3 +433,60 @@
     </footer>
 
 </html>
+
+
+
+
+<script>
+  // Smooth Scrolling
+  document.querySelectorAll('.smooth-scroll').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+      e.preventDefault();
+  
+      document.querySelector(this.getAttribute('href')).scrollIntoView({
+        behavior: 'smooth'
+      });
+    });
+  });
+  </script>
+
+  <script>
+    const openButton = document.querySelector('.open-popup');
+    const closeButton = document.querySelector('.close-button');
+    const popup = document.querySelector('.login-popup');
+
+openButton.addEventListener('click', function() {
+  popup.style.display = 'block';
+});
+
+closeButton.addEventListener('click', function() {
+  popup.style.display = 'none';
+});
+
+  </script>
+  <script>
+    $(document).ready(function() {
+  $(".scroll-btn").click(function() {
+    $("html, body").animate({
+      scrollTop: 0
+    }, 800);
+  });
+});
+
+  </script>
+  <!-- contact us page scroll from about us-->
+  <script>
+    function scrollToContact() {
+      const contact = document.querySelector("#contact");
+      contact.scrollIntoView({ behavior: "smooth" });
+    }
+  </script>
+   <script>
+   document.querySelector("li a[href='#login']").addEventListener("click", function() {
+    document.querySelector("input[type='checkbox']").checked = true;
+  });
+  </script>
+  
+
+
+
